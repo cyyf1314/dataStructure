@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        //includePath:是指编译时所需要的头文件路径，${workspaceFolder}表示当前工作区的文件夹路径。（当前工作区的文件夹统称为项目）
+        "${workspaceFolder}/**", //这行表示项目目录下所有的子目录
+        "${workspaceFolder}/include",
+        "${workspaceFolder}/include/**" //因此，在涉及分目录时，需要将指定分目录，即头文件夹
+      ],
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "windowsSdkVersion": "10.0.22621.0",
+      "compilerPath": "C:/mingw64/bin/g++.exe",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "gcc-x64"
+    }
+  ],
+  "version": 4
+}

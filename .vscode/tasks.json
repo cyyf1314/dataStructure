@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "C/C++: g++.exe 生成活动文件",
+      "command": "C:\\mingw64\\bin\\g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g", //${workspaceFolder}为当前项目文件夹的路径，分目录编写时需要指定分目录的路径
+        //"${workspaceFolder}\\src\\**", //"-g":生成调试信息，也可以说是指定源文件夹的路径，分目录下为左侧这样编写即可
+        "${workspaceFolder}\\src\\*.cpp",
+        "-g",
+        "${workspaceFolder}\\src\\treeCPP\\*.cpp",
+        "-g",
+        "${workspaceFolder}\\src\\hashCPP\\*.cpp",
+        "-g",
+        "${workspaceFolder}\\src\\maxPriorityQueueCPP\\*.cpp",
+        "-o",
+        "${workspaceFolder}\\out\\${fileBasenameNoExtension}.exe", //指定可执行文件的路径和名称，out为路径，会创建对应的文件夹，${fileBasenameNoExtension}为编译的文件的文件名
+        "-I",
+        "${workspaceFolder}\\include",
+        "-I",
+        "${workspaceFolder}\\include\\treeH",
+        "-I",
+        "${workspaceFolder}\\include\\hashH", //"I":指定头文件的搜索路径，一般为外部库的头文件夹。每一个不同的目录都要加上“-I"，不可以全部放在一个域下
+        "-I",
+        "${workspaceFolder}\\include\\priorityQueueH"
+      ], //"-L":指定库文件夹的搜索路径，即lib文件夹
+      "options": {
+        //"-l":在库文件夹中指定对应的文件，不用带扩展名，文件名即可
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "编译器: \"C:\\mingw64\\bin\\g++.exe\""
+    }
+  ]
+}
