@@ -1,7 +1,6 @@
 #ifndef _hashTable_
 #define _hashTable_
 #include "global.h"
-using namespace std;
 
 template <class T>
 class stringToInt

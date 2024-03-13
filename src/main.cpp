@@ -14,11 +14,15 @@ int main()
 {
 
   int a = 1;
+  cout << ++a << endl;
+  cout << a++ << endl;
 
-  int *c = &a;
+  int b = 1;
+
+  int *c = &b;
 
   print = p;
-  print(c);
+
   system("pause");
   return 0;
 }
